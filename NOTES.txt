@@ -1,0 +1,9 @@
+
+Don't Judge A Book By Its Markup
+
+- explain how HTML is achieving XML's goal
+- show the simple identity XSLT transform that converts XHTML to HTML
+- examples of issues:
+    - jQuery problem
+    - convergence with namespacing issues
+
