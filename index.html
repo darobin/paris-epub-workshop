@@ -50,14 +50,14 @@
         </p>
         <p>
           HTML is no longer a “tag soup” language. Following a Herculean effort, its parsing has
-          now been fully defined, in a manner that remains compatible with the vast amounts of 
+          now been fully defined, in a manner that remains compatible with the vast amounts of
           existing content. The level of interoperability between implementations is extremely
           high, and their performance is overall excellent. The one lesser spot (that is being
           addressed) is that HTML parsers for server-side languages are still lagging. But as we
           will see below, that is not a cause of concern for the topic that occupies us here.
         </p>
         <p>
-          XML had grand plans for distributed extensibility built atop namespaces, that were 
+          XML had grand plans for distributed extensibility built atop namespaces, that were
           expected to enable compound document formats, distributed discoverable implementation, and
           semantic safety, but for the most part this system barely evolved beyond the syntax
           level and never reached the hard problems of integrating distributed behaviour. Even for
@@ -74,7 +74,7 @@
         <p>
           My point here is not to belittle XML or to argue for its dismissal across the board in
           favour of HTML. Rather, I believe that as a community we need to align our expectations
-          on reality in order to better plan for the future through the technologies that we 
+          on reality in order to better plan for the future through the technologies that we
           develop.
         </p>
         <p>
@@ -101,7 +101,7 @@
         <pre>
 &lt;xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  &lt;xsl:output method="html" 
+  &lt;xsl:output method="html"
               doctype-system="about:legacy-compat" encoding="UTF-8"/>
   &lt;xsl:template match="@*|node()">
     &lt;xsl:copy>
@@ -112,7 +112,7 @@
         </pre>
         <p>
           If you have an existing pipeline that is already producing XHTML, tacking this simple
-          XSLT 1.0 style sheet at its end is <em>all</em> you need in order to switch you production
+          XSLT 1.0 style sheet at its end is <em>all</em> you need in order to switch your production
           processing to HTML. There is nothing complicated about it, it ought to execute rather
           quickly in most modern processors, and of course instead of an extra step you can simply
           modify the <code>xsl:output</code> of a preceding sheet.
@@ -158,7 +158,7 @@
         <p>
           The problem also applies in reverse. Solutions designed to work with XHTML, for instance
           ones that make use of namespaces, will not port well to HTML. This effectively locks
-          ebook content off the Web and prevents its natural evolution into an integrated Web in 
+          ebook content off the Web and prevents its natural evolution into an integrated Web in
           which one seamlessly navigates from page to book to app. This also means that the broader
           Web community is not taking part in solutions designed for what then becomes the ebook
           silo, which in turn deprives them of a vast reservoir of support and innovation.
@@ -175,9 +175,9 @@
       <section>
         <h2>Client of the Future</h2>
         <p>
-          Having established that server-side tool chains built on XML are safe and sound for 
+          Having established that server-side tool chains built on XML are safe and sound for
           continued use, but that using HTML on the client-side is much preferable, we now need
-          to look at how what needs to be done in order to migrate to this more reliable and
+          to look at what needs to be done in order to migrate to this more reliable and
           future-proof setup.
         </p>
         <p>
@@ -185,7 +185,7 @@
           complete convergence with the Web. On this I offer that all relevant parties cooperate
           in order to address each issue one by one, in an evolutionary manner, so as to ensure
           a smooth transition. It is likely that some new generic HTML-based solutions will be
-          required in some cases; I would be more than happy to help contribute to their 
+          required in some cases; I would be more than happy to help contribute to their
           development.
         </p>
       </section>
