@@ -43,13 +43,53 @@
       </section>
       <section>
         <h2>Nothing is Lost</h2>
-        <!--
-          - the vision remains
-          - it is in fact coming to fruition, though not in the expected manner
-          - very strong interoperability (and performance) in HTML parsing
-          - (server-side implementations lagging)
-          - update your expectations
-        -->
+        <p>
+          First of all, the vision of full interoperability and distributed extensibility remains.
+          In fact, it is stronger than it has ever been. It is coming to fruition, albeit not in the
+          way initially envisioned by the XML project.
+        </p>
+        <p>
+          HTML is no longer a “tag soup” language. Following a Herculean effort, its parsing has
+          now been fully defined, in a manner that remains compatible with the vast amounts of 
+          existing content. The level of interoperability between implementations is extremely
+          high, and their performance is overall excellent. The one lesser spot (that is being
+          addressed) is that HTML parsers for server-side languages are still lagging. But as we
+          will see below, that is not a cause of concern for the topic that occupies us here.
+        </p>
+        <p>
+          XML had grand plans for distributed extensibility built atop namespaces, that were 
+          expected to enable compound document formats, distributed discoverable implementation, and
+          semantic safety, but for the most part this system barely evolved beyond the syntax
+          level and never reached the hard problems of integrating distributed behaviour. Even for
+          relatively simple aspects such as validation, existing XML solutions are poorly equipped
+          to face distributed extensibility; the only viable solution is NVDL and very few people
+          ever use it.
+        </p>
+        <p>
+          In the meantime, HTML is tackling precisely such difficult issues through the ongoing
+          work on Web Components. While it is still too early to call it a success, the first
+          implementations are promising, there is a lot of momentum behind this approach, and it
+          certainly is offering solutions to these hard problems.
+        </p>
+        <p>
+          My point here is not to belittle XML or to argue for its dismissal across the board in
+          favour of HTML. Rather, I believe that as a community we need to align our expectations
+          on reality in order to better plan for the future through the technologies that we 
+          develop.
+        </p>
+        <p>
+          XML has been and remains a very strong solution to capture and process disparate
+          information with variegated structure, and is particularly good at encoding textual
+          content. It benefits from a solid ecosystem of tried and true tools that often surpass
+          those available to other systems. On the client, however, we need to agree that it is
+          quite simply dead. HTML on the other hand now provides for an extremely powerful
+          client-side platform that is unrivalled in its power and richness.
+        </p>
+        <p>
+          Based on such updated expectations about each technology, I believe that it is clear
+          that the two are complementary, and that publishers who are already heavily invested in
+          the XML tool chain can greatly benefit from the alliance of both.
+        </p>
       </section>
       <section>
         <h2>Harmony</h2>
@@ -64,12 +104,6 @@
           - problems with XHTML on the client
           - jQuery problem, important for interactive content, lack of testing
           - convergence with namespacing issues
-        -->
-      </section>
-      <section>
-        <h2>Chaos</h2>
-        <!--
-          - XXX
         -->
       </section>
       <section>
