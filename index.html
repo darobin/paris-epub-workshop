@@ -93,17 +93,41 @@
       </section>
       <section>
         <h2>Harmony</h2>
-        <!--
-          - show the simple identity XSLT transform that converts XHTML to HTML
-          - can keep XML workflow, just output HTML
-        -->
+        <p>
+          The prospect of deploying two technologies instead of one may at first seem daunting.
+          Will it not incur greater complexity? We will look at why HTML is in fact a simplification
+          over XHTML in the next section, but first consider the following piece of code:
+        </p>
+        <pre>
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  &lt;xsl:output method="html" doctype-system="about:legacy-compat" encoding="UTF-8"/>
+  &lt;xsl:template match="@*|node()">
+    &lt;xsl:copy>
+      &lt;xsl:apply-templates select="@*|node()"/>
+    &lt;/xsl:copy>
+  &lt;/xsl:template>
+&lt;/xsl:stylesheet>
+        </pre>
+        <p>
+          If you have an existing pipeline that is already producing XHTML, tacking this simple
+          XSLT 1.0 style sheet at its end is <em>all</em> you need in order to switch you production
+          processing to HTML. There is nothing complicated about it, it ought to execute rather
+          quickly in most modern processors, and of course instead of an extra step you can simply
+          modify the <code>xsl:output</code> of a preceding sheet.
+        </p>
+        <p>
+          The amount of work required in order to evolve the XML production pipeline is therefore
+          as minimal as it gets. Keep the XML, just output HTML.
+        </p>
       </section>
       <section>
         <h2>Don't Judge A Book By Its Markup</h2>
         <!--
+          - at this point: why not XHTML?
           - problems with XHTML on the client
           - jQuery problem, important for interactive content, lack of testing
-          - convergence with namespacing issues
+            - using HTML reduces complexity because you won't have to be the first to notice problems
+          - convergence with namespacing issues that don't port to HTML
         -->
       </section>
       <section>
