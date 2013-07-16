@@ -124,13 +124,53 @@
       </section>
       <section>
         <h2>Don't Judge A Book By Its Markup</h2>
-        <!--
-          - at this point: why not XHTML?
-          - problems with XHTML on the client
-          - jQuery problem, important for interactive content, lack of testing
-            - using HTML reduces complexity because you won't have to be the first to notice problems
-          - convergence with namespacing issues that don't port to HTML
-        -->
+        <p>
+          At this point the astute reader might ask: “Wait a second… why not just use XHTML then?”
+        </p>
+        <p>
+          There are two primary reasons. First, XHTML is not simply “HTML in XML”. There are
+          differences in the way in which it gets processed in the browser, and while efforts have
+          been made to keep the delta to a minimum, it is still there, and there is no doubt that
+          if you ever author XHTML with the expectation that it will behave exactly like HTML, that
+          delta will come back to bite you in the debugger.
+        </p>
+        <p>
+          Second, it is important to understand that developers of tools and libraries created for
+          Web content rarely, if ever, test for XHTML. A lot of the time, they also don't care about
+          XHTML-related issues when they are reported.
+        </p>
+        <p>
+          This can quickly become a problem when for instance interactivity is added to content
+          through the use of JavaScript libraries. A good example is jQuery, which can at times work
+          fine in XHTML mode and then all of a sudden blow up in an inexplicable (and hard to debug)
+          fashion at an innocuous-looking line of code that seems no different from the ones around
+          it.
+        </p>
+        <p>
+          That is the reason why using HTML on the client side reduces complexity compared to using
+          XHTML. XHTML is used on the client so rarely that whenever you do anything ever-so-slightly
+          out of the ordinary the odds are good that you are the first one to do it. And the only
+          thing that comes from exploring such obscure code paths is not the glory of discovery but
+          solely the pain of booby-trapped corridors. Readers already suffer from enough
+          interoperability issues on their own; there is no need to make the problem worse with
+          XHTML.
+        </p>
+        <p>
+          The problem also applies in reverse. Solutions designed to work with XHTML, for instance
+          ones that make use of namespaces, will not port well to HTML. This effectively locks
+          ebook content off the Web and prevents its natural evolution into an integrated Web in 
+          which one seamlessly navigates from page to book to app. This also means that the broader
+          Web community is not taking part in solutions designed for what then becomes the ebook
+          silo, which in turn deprives them of a vast reservoir of support and innovation.
+        </p>
+        <p style='font-size: 0.8em; font-variant: italic'>
+          Note that when I discuss XHTML in this paper, I mean <strong>real</strong> XHTML, which is
+          to say served as <code>application/xhtml+xml</code> and processed using an XML parser.
+          That is different from using polyglot markup, which may be using XHTML syntax but is
+          processed by browsers as if it were HTML, thereby leading to no differences whatsoever.
+          Polyglot can be somewhat useful in some specific situations, but it should not be
+          prescribed as a silver bullet.
+        </p>
       </section>
       <section>
         <h2>Client of the Future</h2>
