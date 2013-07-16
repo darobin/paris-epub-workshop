@@ -1,14 +1,4 @@
 
-Don't Judge A Book By Its Markup
 
-- explain how HTML is achieving XML's goal
-- show the simple identity XSLT transform that converts XHTML to HTML
-- examples of issues:
-    - jQuery problem, important for interactive content, lack of testing
-    - convergence with namespacing issues
+
 - can keep XML workflow, just output HTML
-- full convergence with the web
-- the important part here is the client, not the generation process
-- even polyglot can work so long as the client is interpreting the content as HTML
-
-- there is however a need to plan for the future and effect changes accordingly
