@@ -99,8 +99,10 @@
           over XHTML in the next section, but first consider the following piece of code:
         </p>
         <pre>
-&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  &lt;xsl:output method="html" doctype-system="about:legacy-compat" encoding="UTF-8"/>
+&lt;xsl:stylesheet version="1.0"
+                   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  &lt;xsl:output method="html" 
+                 doctype-system="about:legacy-compat" encoding="UTF-8"/>
   &lt;xsl:template match="@*|node()">
     &lt;xsl:copy>
       &lt;xsl:apply-templates select="@*|node()"/>
